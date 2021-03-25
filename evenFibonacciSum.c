@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
 
 int main()
 {
@@ -26,8 +25,5 @@ int main()
             fib1 = fib2;
             fib2 = fib;
         }
-
     }
-
-
 }
