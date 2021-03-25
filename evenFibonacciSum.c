@@ -8,7 +8,7 @@ int main()
     int t = 0;
     int n;
 
-    printf("Enter the number n\n");
+    printf("Enter the number n: ");
     scanf("%d", &n);
 
     while(1){
