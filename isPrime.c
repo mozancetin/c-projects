@@ -1,37 +1,36 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
+#include <time.h>
+
+int myRandomFunc(int lower, int upper){
+    int num;
+    srand(time(NULL));
+    num = (rand() % (upper - lower)) + lower;
+    return num;
+}
 
 int main()
 {
-    int n;
-    int i = 2;
-    printf("Number: ");
-    scanf("%d", &n);
-
+    int c = 1;
+    int a = 1;
+    int b = 100;
+    int bkmk;
     while(1){
-        if(n == 0 || n == 1 || n % 2 == 0){
-            printf("This number is not prime");
+        int guess = myRandomFunc(a, b);
+        printf("\nMy guess: %d is it right?\n", guess);
+        printf("If greater: 1 \nIf smaller: -1 \nIf known: 0\n");
+        scanf("%d", &bkmk);
+        if(bkmk == 0){
+            printf("I knew in %d steps!", c);
             break;
         }
-        else{
-            if(n < pow(i, 2)){
-                printf("This is a prime number");
-                break;
-            }
-
-            if(n % i == 0){
-                printf("This number is not prime");
-                break;
-            }
-            else{
-                if(i % 2 == 0){
-                    i += 1;
-                }
-                else{
-                    i += 2;
-                }
-            }
+        if(bkmk == 1){
+            a = guess + 1;
+            c += 1;
+        }
+        if(bkmk == -1){
+            b = guess - 1;
+            c += 1;
         }
     }
     return 0;
