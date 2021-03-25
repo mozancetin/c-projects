@@ -26,4 +26,5 @@ int main()
     sleep(1);
     printf("Countdown 0\n");
     sleep(1);
+    return 0;
 }
