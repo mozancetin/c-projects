@@ -8,4 +8,5 @@ int main()
         printf("Countdown %d\n",i);
         sleep(1);
     }
+    return 0;
 }
