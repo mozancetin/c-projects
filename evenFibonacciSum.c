@@ -26,4 +26,5 @@ int main()
             fib2 = fib;
         }
     }
+    return 0;
 }
