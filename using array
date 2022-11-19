@@ -1,0 +1,32 @@
+#include <stdio.h>
+int main()
+{
+    int arr[6];
+    int min, max, i, sum=0;
+    printf("enter values:\n");
+    for(i=0;i<6;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    for(i=0;i<6;i++)
+    {
+        sum=sum+arr[i];
+        min=arr[0];
+        max=arr[0];
+        if(arr[i]>max)
+        {
+            max=arr[i];
+        }
+        if(arr[i]<min)
+        {
+            min=arr[i];
+        }
+    }printf("\n");
+    
+    printf("%dThe max value is ",max);
+    printf("%dThe min value is ",min);
+    printf("%dThe sum value is ",sum);
+   
+   
+    return 0;
+}
